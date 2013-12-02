@@ -44,6 +44,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -168,6 +170,72 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\BaseDatosAnimalia.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDatosAnimalia.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BaseDatosAnimalia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BaseDatosAnimalia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDatosAnimalia.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstructuraPiel.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Habitat.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invertebrados.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Protozoarios.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoAlimentacion.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoExtremidad.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoReproduccion.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoRespiracion.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoSangre.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoSimetria.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoTejido.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoUsuario.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vertebrados.cs">
+      <DependentUpon>BaseDatosAnimalia.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +295,23 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <EntityDeploy Include="Models\BaseDatosAnimalia.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BaseDatosAnimalia.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BaseDatosAnimalia.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaseDatosAnimalia.edmx</DependentUpon>
+      <LastGenOutput>BaseDatosAnimalia.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BaseDatosAnimalia.edmx.diagram">
+      <DependentUpon>BaseDatosAnimalia.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\BaseDatosAnimalia.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaseDatosAnimalia.edmx</DependentUpon>
+      <LastGenOutput>BaseDatosAnimalia.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -287,6 +372,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
