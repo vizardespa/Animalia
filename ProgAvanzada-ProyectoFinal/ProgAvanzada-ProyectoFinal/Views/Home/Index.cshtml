@@ -1,4 +1,30 @@
-﻿@{
+﻿@model ProgAvanzada_ProyectoFinal.Models.Usuario
+@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+    </section>
+}
+    <div>
+        <p align="center">
+            <img src="~/TURBO!.png" width="300" height="300"/>
+            
+            @using (Html.BeginForm()) {
+            <center>
+            @Html.AntiForgeryToken()
+            @Html.Label("Usuario");
+            @Html.TextBoxFor(m=>m.Usuario1)
+            @Html.LabelFor(m=>m.Contraseña)
+            @Html.TextBoxFor(m=>m.Contraseña,new { type = "password"})
+            <br />
+            <br />
+            <input type="submit" value="Ingresar"/>
+            </center>
+        }
+        </p>
+    </div>
+@*@{
     ViewBag.Title = "Página principal";
 }
 @section featured {
@@ -42,4 +68,4 @@
         y precio para sus aplicaciones.
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Más información…</a>
     </li>
-</ol>
+</ol>*@

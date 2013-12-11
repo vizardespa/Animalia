@@ -1,0 +1,67 @@
+﻿@model ProgAvanzada_ProyectoFinal.Models.Usuario
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Usuario</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdUsuario, "TipoUsuario")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IdUsuario", String.Empty)
+            @Html.ValidationMessageFor(model => model.IdUsuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Usuario1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Usuario1)
+            @Html.ValidationMessageFor(model => model.Usuario1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Contraseña)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Contraseña)
+            @Html.ValidationMessageFor(model => model.Contraseña)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdTipoUsuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IdTipoUsuario)
+            @Html.ValidationMessageFor(model => model.IdTipoUsuario)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
