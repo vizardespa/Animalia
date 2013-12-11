@@ -1,0 +1,91 @@
+﻿@model ProgAvanzada_ProyectoFinal.Models.Protozoarios
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Protozoarios</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdProtozoarios)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IdProtozoarios)
+            @Html.ValidationMessageFor(model => model.IdProtozoarios)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NombreCientifico)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NombreCientifico)
+            @Html.ValidationMessageFor(model => model.NombreCientifico)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumeroPatas)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumeroPatas)
+            @Html.ValidationMessageFor(model => model.NumeroPatas)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdHabitat, "Habitat")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IdHabitat", String.Empty)
+            @Html.ValidationMessageFor(model => model.IdHabitat)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdTipoReproduccion, "TipoReproduccion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IdTipoReproduccion", String.Empty)
+            @Html.ValidationMessageFor(model => model.IdTipoReproduccion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdTipoAlimentacion, "TipoAlimentacion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IdTipoAlimentacion", String.Empty)
+            @Html.ValidationMessageFor(model => model.IdTipoAlimentacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdTipoRespiracion, "TipoRespiracion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IdTipoRespiracion", String.Empty)
+            @Html.ValidationMessageFor(model => model.IdTipoRespiracion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VivirAguaDulce)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VivirAguaDulce)
+            @Html.ValidationMessageFor(model => model.VivirAguaDulce)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

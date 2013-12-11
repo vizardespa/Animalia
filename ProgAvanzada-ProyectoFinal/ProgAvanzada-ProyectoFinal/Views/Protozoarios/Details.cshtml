@@ -1,0 +1,71 @@
+﻿@model ProgAvanzada_ProyectoFinal.Models.Protozoarios
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Protozoarios</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdProtozoarios)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdProtozoarios)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NombreCientifico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NombreCientifico)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NumeroPatas)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumeroPatas)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Habitat.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Habitat.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoReproduccion.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoReproduccion.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoAlimentacion.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoAlimentacion.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoRespiracion.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoRespiracion.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VivirAguaDulce)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VivirAguaDulce)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

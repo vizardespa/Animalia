@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ProgAvanzada_ProyectoFinal.Models.Protozoarios>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProtozoarios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCientifico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroPatas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Habitat.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoReproduccion.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoAlimentacion.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoRespiracion.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VivirAguaDulce)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProtozoarios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCientifico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroPatas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Habitat.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoReproduccion.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoAlimentacion.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoRespiracion.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VivirAguaDulce)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

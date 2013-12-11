@@ -1,0 +1,85 @@
+﻿@model ProgAvanzada_ProyectoFinal.Models.Vertebrados
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Vertebrados</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdVertebrados)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdVertebrados)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NombreCientifico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NombreCientifico)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NumeroPatas)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NumeroPatas)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Habitat.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Habitat.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoReproduccion.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoReproduccion.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoAlimentacion.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoAlimentacion.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoRespiracion.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoRespiracion.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoExtremidad.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoExtremidad.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EstructuraPiel.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EstructuraPiel.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoSangre.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoSangre.Nombre)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
