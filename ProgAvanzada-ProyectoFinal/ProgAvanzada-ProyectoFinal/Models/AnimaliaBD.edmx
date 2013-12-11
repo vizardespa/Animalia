@@ -1,0 +1,1224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MagnaEnciclopediaAnimalTurboModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="MagnaEnciclopediaAnimalTurboModelStoreContainer">
+          <EntitySet Name="EstructuraPiel" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.EstructuraPiel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Habitat" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.Habitat" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Invertebrados" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.Invertebrados" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Protozoarios" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.Protozoarios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoAlimentacion" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.TipoAlimentacion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoExtremidad" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.TipoExtremidad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoReproduccion" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.TipoReproduccion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoRespiracion" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.TipoRespiracion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoSangre" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.TipoSangre" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoSimetria" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.TipoSimetria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoTejido" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.TipoTejido" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoUsuario" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.TipoUsuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vertebrados" EntityType="MagnaEnciclopediaAnimalTurboModel.Store.Vertebrados" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Invertebr__IdHab__33D4B598" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Invertebr__IdHab__33D4B598">
+            <End Role="Habitat" EntitySet="Habitat" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__34C8D9D1" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Invertebr__IdTip__34C8D9D1">
+            <End Role="TipoReproduccion" EntitySet="TipoReproduccion" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__35BCFE0A" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Invertebr__IdTip__35BCFE0A">
+            <End Role="TipoAlimentacion" EntitySet="TipoAlimentacion" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__36B12243" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Invertebr__IdTip__36B12243">
+            <End Role="TipoRespiracion" EntitySet="TipoRespiracion" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__37A5467C" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Invertebr__IdTip__37A5467C">
+            <End Role="TipoSimetria" EntitySet="TipoSimetria" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__38996AB5" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Invertebr__IdTip__38996AB5">
+            <End Role="TipoTejido" EntitySet="TipoTejido" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Protozoar__IdHab__3D5E1FD2" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Protozoar__IdHab__3D5E1FD2">
+            <End Role="Habitat" EntitySet="Habitat" />
+            <End Role="Protozoarios" EntitySet="Protozoarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Protozoar__IdTip__3E52440B" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Protozoar__IdTip__3E52440B">
+            <End Role="TipoReproduccion" EntitySet="TipoReproduccion" />
+            <End Role="Protozoarios" EntitySet="Protozoarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Protozoar__IdTip__3F466844" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Protozoar__IdTip__3F466844">
+            <End Role="TipoAlimentacion" EntitySet="TipoAlimentacion" />
+            <End Role="Protozoarios" EntitySet="Protozoarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Protozoar__IdTip__403A8C7D" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Protozoar__IdTip__403A8C7D">
+            <End Role="TipoRespiracion" EntitySet="TipoRespiracion" />
+            <End Role="Protozoarios" EntitySet="Protozoarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdEst__2E1BDC42" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Vertebrad__IdEst__2E1BDC42">
+            <End Role="EstructuraPiel" EntitySet="EstructuraPiel" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdHab__29572725" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Vertebrad__IdHab__29572725">
+            <End Role="Habitat" EntitySet="Habitat" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2A4B4B5E" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Vertebrad__IdTip__2A4B4B5E">
+            <End Role="TipoReproduccion" EntitySet="TipoReproduccion" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2B3F6F97" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Vertebrad__IdTip__2B3F6F97">
+            <End Role="TipoAlimentacion" EntitySet="TipoAlimentacion" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2C3393D0" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Vertebrad__IdTip__2C3393D0">
+            <End Role="TipoRespiracion" EntitySet="TipoRespiracion" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2D27B809" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Vertebrad__IdTip__2D27B809">
+            <End Role="TipoExtremidad" EntitySet="TipoExtremidad" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2F10007B" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK__Vertebrad__IdTip__2F10007B">
+            <End Role="TipoSangre" EntitySet="TipoSangre" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_TipoUsuario" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK_Usuario_TipoUsuario">
+            <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="EstructuraPiel">
+          <Key>
+            <PropertyRef Name="IdEstructuraPiel" />
+          </Key>
+          <Property Name="IdEstructuraPiel" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Habitat">
+          <Key>
+            <PropertyRef Name="IdHabitat" />
+          </Key>
+          <Property Name="IdHabitat" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Invertebrados">
+          <Key>
+            <PropertyRef Name="IdVertebrados" />
+          </Key>
+          <Property Name="IdVertebrados" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCientifico" Type="varchar" MaxLength="100" />
+          <Property Name="NumeroPatas" Type="int" />
+          <Property Name="IdHabitat" Type="int" />
+          <Property Name="IdTipoReproduccion" Type="int" />
+          <Property Name="IdTipoAlimentacion" Type="int" />
+          <Property Name="IdTipoRespiracion" Type="int" />
+          <Property Name="IdTipoSimetria" Type="int" />
+          <Property Name="IdTipoTejido" Type="int" />
+        </EntityType>
+        <EntityType Name="Protozoarios">
+          <Key>
+            <PropertyRef Name="IdVertebrados" />
+          </Key>
+          <Property Name="IdVertebrados" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCientifico" Type="varchar" MaxLength="100" />
+          <Property Name="NumeroPatas" Type="int" />
+          <Property Name="IdHabitat" Type="int" />
+          <Property Name="IdTipoReproduccion" Type="int" />
+          <Property Name="IdTipoAlimentacion" Type="int" />
+          <Property Name="IdTipoRespiracion" Type="int" />
+          <Property Name="VivirAguaDulce" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TipoAlimentacion">
+          <Key>
+            <PropertyRef Name="IdTipoAlimentacion" />
+          </Key>
+          <Property Name="IdTipoAlimentacion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TipoExtremidad">
+          <Key>
+            <PropertyRef Name="IdTipoExtremidad" />
+          </Key>
+          <Property Name="IdTipoExtremidad" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TipoReproduccion">
+          <Key>
+            <PropertyRef Name="IdTipoReproduccion" />
+          </Key>
+          <Property Name="IdTipoReproduccion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TipoRespiracion">
+          <Key>
+            <PropertyRef Name="IdTipoRespiracion" />
+          </Key>
+          <Property Name="IdTipoRespiracion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TipoSangre">
+          <Key>
+            <PropertyRef Name="IdTipoSangre" />
+          </Key>
+          <Property Name="IdTipoSangre" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TipoSimetria">
+          <Key>
+            <PropertyRef Name="IdTipoSimetria" />
+          </Key>
+          <Property Name="IdTipoSimetria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TipoTejido">
+          <Key>
+            <PropertyRef Name="IdTipoTejido" />
+          </Key>
+          <Property Name="IdTipoTejido" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TipoUsuario">
+          <Key>
+            <PropertyRef Name="IdTipoUsuario" />
+          </Key>
+          <Property Name="IdTipoUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Usuario" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Contraseña" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdTipoUsuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vertebrados">
+          <Key>
+            <PropertyRef Name="IdVertebrados" />
+          </Key>
+          <Property Name="IdVertebrados" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCientifico" Type="varchar" MaxLength="100" />
+          <Property Name="NumeroPatas" Type="int" />
+          <Property Name="IdHabitat" Type="int" />
+          <Property Name="IdTipoReproduccion" Type="int" />
+          <Property Name="IdTipoAlimentacion" Type="int" />
+          <Property Name="IdTipoRespiracion" Type="int" />
+          <Property Name="IdTipoExtremidad" Type="int" />
+          <Property Name="IdEstructuraPiel" Type="int" />
+          <Property Name="IdTipoSangre" Type="int" />
+        </EntityType>
+        <Association Name="FK__Invertebr__IdHab__33D4B598">
+          <End Role="Habitat" Type="MagnaEnciclopediaAnimalTurboModel.Store.Habitat" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Habitat">
+              <PropertyRef Name="IdHabitat" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdHabitat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__34C8D9D1">
+          <End Role="TipoReproduccion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoReproduccion" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoReproduccion">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__35BCFE0A">
+          <End Role="TipoAlimentacion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoAlimentacion" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAlimentacion">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__36B12243">
+          <End Role="TipoRespiracion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoRespiracion" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoRespiracion">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__37A5467C">
+          <End Role="TipoSimetria" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoSimetria" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoSimetria">
+              <PropertyRef Name="IdTipoSimetria" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoSimetria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__38996AB5">
+          <End Role="TipoTejido" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoTejido" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoTejido">
+              <PropertyRef Name="IdTipoTejido" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoTejido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Protozoar__IdHab__3D5E1FD2">
+          <End Role="Habitat" Type="MagnaEnciclopediaAnimalTurboModel.Store.Habitat" Multiplicity="0..1" />
+          <End Role="Protozoarios" Type="MagnaEnciclopediaAnimalTurboModel.Store.Protozoarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Habitat">
+              <PropertyRef Name="IdHabitat" />
+            </Principal>
+            <Dependent Role="Protozoarios">
+              <PropertyRef Name="IdHabitat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Protozoar__IdTip__3E52440B">
+          <End Role="TipoReproduccion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoReproduccion" Multiplicity="0..1" />
+          <End Role="Protozoarios" Type="MagnaEnciclopediaAnimalTurboModel.Store.Protozoarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoReproduccion">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Principal>
+            <Dependent Role="Protozoarios">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Protozoar__IdTip__3F466844">
+          <End Role="TipoAlimentacion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoAlimentacion" Multiplicity="0..1" />
+          <End Role="Protozoarios" Type="MagnaEnciclopediaAnimalTurboModel.Store.Protozoarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAlimentacion">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Principal>
+            <Dependent Role="Protozoarios">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Protozoar__IdTip__403A8C7D">
+          <End Role="TipoRespiracion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoRespiracion" Multiplicity="0..1" />
+          <End Role="Protozoarios" Type="MagnaEnciclopediaAnimalTurboModel.Store.Protozoarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoRespiracion">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Principal>
+            <Dependent Role="Protozoarios">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdEst__2E1BDC42">
+          <End Role="EstructuraPiel" Type="MagnaEnciclopediaAnimalTurboModel.Store.EstructuraPiel" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstructuraPiel">
+              <PropertyRef Name="IdEstructuraPiel" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdEstructuraPiel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdHab__29572725">
+          <End Role="Habitat" Type="MagnaEnciclopediaAnimalTurboModel.Store.Habitat" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Habitat">
+              <PropertyRef Name="IdHabitat" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdHabitat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2A4B4B5E">
+          <End Role="TipoReproduccion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoReproduccion" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoReproduccion">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2B3F6F97">
+          <End Role="TipoAlimentacion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoAlimentacion" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAlimentacion">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2C3393D0">
+          <End Role="TipoRespiracion" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoRespiracion" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoRespiracion">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2D27B809">
+          <End Role="TipoExtremidad" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoExtremidad" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoExtremidad">
+              <PropertyRef Name="IdTipoExtremidad" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoExtremidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2F10007B">
+          <End Role="TipoSangre" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoSangre" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Store.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoSangre">
+              <PropertyRef Name="IdTipoSangre" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoSangre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_TipoUsuario">
+          <End Role="TipoUsuario" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoUsuario" Multiplicity="1" />
+          <End Role="Usuario" Type="MagnaEnciclopediaAnimalTurboModel.Store.Usuario" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TipoUsuario">
+              <PropertyRef Name="IdTipoUsuario" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MagnaEnciclopediaAnimalTurboModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MagnaEnciclopediaAnimalTurboEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="EstructuraPiel" EntityType="MagnaEnciclopediaAnimalTurboModel.EstructuraPiel" />
+          <EntitySet Name="Habitat" EntityType="MagnaEnciclopediaAnimalTurboModel.Habitat" />
+          <EntitySet Name="Invertebrados" EntityType="MagnaEnciclopediaAnimalTurboModel.Invertebrados" />
+          <EntitySet Name="Protozoarios" EntityType="MagnaEnciclopediaAnimalTurboModel.Protozoarios" />
+          <EntitySet Name="sysdiagrams" EntityType="MagnaEnciclopediaAnimalTurboModel.sysdiagrams" />
+          <EntitySet Name="TipoAlimentacion" EntityType="MagnaEnciclopediaAnimalTurboModel.TipoAlimentacion" />
+          <EntitySet Name="TipoExtremidad" EntityType="MagnaEnciclopediaAnimalTurboModel.TipoExtremidad" />
+          <EntitySet Name="TipoReproduccion" EntityType="MagnaEnciclopediaAnimalTurboModel.TipoReproduccion" />
+          <EntitySet Name="TipoRespiracion" EntityType="MagnaEnciclopediaAnimalTurboModel.TipoRespiracion" />
+          <EntitySet Name="TipoSangre" EntityType="MagnaEnciclopediaAnimalTurboModel.TipoSangre" />
+          <EntitySet Name="TipoSimetria" EntityType="MagnaEnciclopediaAnimalTurboModel.TipoSimetria" />
+          <EntitySet Name="TipoTejido" EntityType="MagnaEnciclopediaAnimalTurboModel.TipoTejido" />
+          <EntitySet Name="TipoUsuario" EntityType="MagnaEnciclopediaAnimalTurboModel.TipoUsuario" />
+          <EntitySet Name="Usuario" EntityType="MagnaEnciclopediaAnimalTurboModel.Usuario" />
+          <EntitySet Name="Vertebrados" EntityType="MagnaEnciclopediaAnimalTurboModel.Vertebrados" />
+          <AssociationSet Name="FK__Vertebrad__IdEst__2E1BDC42" Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdEst__2E1BDC42">
+            <End Role="EstructuraPiel" EntitySet="EstructuraPiel" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdHab__33D4B598" Association="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdHab__33D4B598">
+            <End Role="Habitat" EntitySet="Habitat" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Protozoar__IdHab__3D5E1FD2" Association="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdHab__3D5E1FD2">
+            <End Role="Habitat" EntitySet="Habitat" />
+            <End Role="Protozoarios" EntitySet="Protozoarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdHab__29572725" Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdHab__29572725">
+            <End Role="Habitat" EntitySet="Habitat" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__34C8D9D1" Association="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__34C8D9D1">
+            <End Role="TipoReproduccion" EntitySet="TipoReproduccion" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__35BCFE0A" Association="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__35BCFE0A">
+            <End Role="TipoAlimentacion" EntitySet="TipoAlimentacion" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__36B12243" Association="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__36B12243">
+            <End Role="TipoRespiracion" EntitySet="TipoRespiracion" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__37A5467C" Association="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__37A5467C">
+            <End Role="TipoSimetria" EntitySet="TipoSimetria" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invertebr__IdTip__38996AB5" Association="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__38996AB5">
+            <End Role="TipoTejido" EntitySet="TipoTejido" />
+            <End Role="Invertebrados" EntitySet="Invertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Protozoar__IdTip__3E52440B" Association="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__3E52440B">
+            <End Role="TipoReproduccion" EntitySet="TipoReproduccion" />
+            <End Role="Protozoarios" EntitySet="Protozoarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Protozoar__IdTip__3F466844" Association="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__3F466844">
+            <End Role="TipoAlimentacion" EntitySet="TipoAlimentacion" />
+            <End Role="Protozoarios" EntitySet="Protozoarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Protozoar__IdTip__403A8C7D" Association="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__403A8C7D">
+            <End Role="TipoRespiracion" EntitySet="TipoRespiracion" />
+            <End Role="Protozoarios" EntitySet="Protozoarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2B3F6F97" Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2B3F6F97">
+            <End Role="TipoAlimentacion" EntitySet="TipoAlimentacion" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2D27B809" Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2D27B809">
+            <End Role="TipoExtremidad" EntitySet="TipoExtremidad" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2A4B4B5E" Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2A4B4B5E">
+            <End Role="TipoReproduccion" EntitySet="TipoReproduccion" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2C3393D0" Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2C3393D0">
+            <End Role="TipoRespiracion" EntitySet="TipoRespiracion" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vertebrad__IdTip__2F10007B" Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2F10007B">
+            <End Role="TipoSangre" EntitySet="TipoSangre" />
+            <End Role="Vertebrados" EntitySet="Vertebrados" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_TipoUsuario" Association="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario">
+            <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(MagnaEnciclopediaAnimalTurboModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(MagnaEnciclopediaAnimalTurboModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <EntityType Name="EstructuraPiel">
+          <Key>
+            <PropertyRef Name="IdEstructuraPiel" />
+          </Key>
+          <Property Name="IdEstructuraPiel" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Vertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdEst__2E1BDC42" FromRole="EstructuraPiel" ToRole="Vertebrados" />
+        </EntityType>
+        <EntityType Name="Habitat">
+          <Key>
+            <PropertyRef Name="IdHabitat" />
+          </Key>
+          <Property Name="IdHabitat" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Invertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdHab__33D4B598" FromRole="Habitat" ToRole="Invertebrados" />
+          <NavigationProperty Name="Protozoarios" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdHab__3D5E1FD2" FromRole="Habitat" ToRole="Protozoarios" />
+          <NavigationProperty Name="Vertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdHab__29572725" FromRole="Habitat" ToRole="Vertebrados" />
+        </EntityType>
+        <EntityType Name="Invertebrados">
+          <Key>
+            <PropertyRef Name="IdVertebrados" />
+          </Key>
+          <Property Name="IdVertebrados" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCientifico" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NumeroPatas" Type="Int32" />
+          <Property Name="IdHabitat" Type="Int32" />
+          <Property Name="IdTipoReproduccion" Type="Int32" />
+          <Property Name="IdTipoAlimentacion" Type="Int32" />
+          <Property Name="IdTipoRespiracion" Type="Int32" />
+          <Property Name="IdTipoSimetria" Type="Int32" />
+          <Property Name="IdTipoTejido" Type="Int32" />
+          <NavigationProperty Name="Habitat" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdHab__33D4B598" FromRole="Invertebrados" ToRole="Habitat" />
+          <NavigationProperty Name="TipoReproduccion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__34C8D9D1" FromRole="Invertebrados" ToRole="TipoReproduccion" />
+          <NavigationProperty Name="TipoAlimentacion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__35BCFE0A" FromRole="Invertebrados" ToRole="TipoAlimentacion" />
+          <NavigationProperty Name="TipoRespiracion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__36B12243" FromRole="Invertebrados" ToRole="TipoRespiracion" />
+          <NavigationProperty Name="TipoSimetria" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__37A5467C" FromRole="Invertebrados" ToRole="TipoSimetria" />
+          <NavigationProperty Name="TipoTejido" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__38996AB5" FromRole="Invertebrados" ToRole="TipoTejido" />
+        </EntityType>
+        <EntityType Name="Protozoarios">
+          <Key>
+            <PropertyRef Name="IdVertebrados" />
+          </Key>
+          <Property Name="IdVertebrados" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCientifico" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NumeroPatas" Type="Int32" />
+          <Property Name="IdHabitat" Type="Int32" />
+          <Property Name="IdTipoReproduccion" Type="Int32" />
+          <Property Name="IdTipoAlimentacion" Type="Int32" />
+          <Property Name="IdTipoRespiracion" Type="Int32" />
+          <Property Name="VivirAguaDulce" Type="Boolean" />
+          <NavigationProperty Name="Habitat" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdHab__3D5E1FD2" FromRole="Protozoarios" ToRole="Habitat" />
+          <NavigationProperty Name="TipoReproduccion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__3E52440B" FromRole="Protozoarios" ToRole="TipoReproduccion" />
+          <NavigationProperty Name="TipoAlimentacion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__3F466844" FromRole="Protozoarios" ToRole="TipoAlimentacion" />
+          <NavigationProperty Name="TipoRespiracion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__403A8C7D" FromRole="Protozoarios" ToRole="TipoRespiracion" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TipoAlimentacion">
+          <Key>
+            <PropertyRef Name="IdTipoAlimentacion" />
+          </Key>
+          <Property Name="IdTipoAlimentacion" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Invertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__35BCFE0A" FromRole="TipoAlimentacion" ToRole="Invertebrados" />
+          <NavigationProperty Name="Protozoarios" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__3F466844" FromRole="TipoAlimentacion" ToRole="Protozoarios" />
+          <NavigationProperty Name="Vertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2B3F6F97" FromRole="TipoAlimentacion" ToRole="Vertebrados" />
+        </EntityType>
+        <EntityType Name="TipoExtremidad">
+          <Key>
+            <PropertyRef Name="IdTipoExtremidad" />
+          </Key>
+          <Property Name="IdTipoExtremidad" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Vertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2D27B809" FromRole="TipoExtremidad" ToRole="Vertebrados" />
+        </EntityType>
+        <EntityType Name="TipoReproduccion">
+          <Key>
+            <PropertyRef Name="IdTipoReproduccion" />
+          </Key>
+          <Property Name="IdTipoReproduccion" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Invertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__34C8D9D1" FromRole="TipoReproduccion" ToRole="Invertebrados" />
+          <NavigationProperty Name="Protozoarios" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__3E52440B" FromRole="TipoReproduccion" ToRole="Protozoarios" />
+          <NavigationProperty Name="Vertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2A4B4B5E" FromRole="TipoReproduccion" ToRole="Vertebrados" />
+        </EntityType>
+        <EntityType Name="TipoRespiracion">
+          <Key>
+            <PropertyRef Name="IdTipoRespiracion" />
+          </Key>
+          <Property Name="IdTipoRespiracion" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Invertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__36B12243" FromRole="TipoRespiracion" ToRole="Invertebrados" />
+          <NavigationProperty Name="Protozoarios" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdTip__403A8C7D" FromRole="TipoRespiracion" ToRole="Protozoarios" />
+          <NavigationProperty Name="Vertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2C3393D0" FromRole="TipoRespiracion" ToRole="Vertebrados" />
+        </EntityType>
+        <EntityType Name="TipoSangre">
+          <Key>
+            <PropertyRef Name="IdTipoSangre" />
+          </Key>
+          <Property Name="IdTipoSangre" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Vertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2F10007B" FromRole="TipoSangre" ToRole="Vertebrados" />
+        </EntityType>
+        <EntityType Name="TipoSimetria">
+          <Key>
+            <PropertyRef Name="IdTipoSimetria" />
+          </Key>
+          <Property Name="IdTipoSimetria" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Invertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__37A5467C" FromRole="TipoSimetria" ToRole="Invertebrados" />
+        </EntityType>
+        <EntityType Name="TipoTejido">
+          <Key>
+            <PropertyRef Name="IdTipoTejido" />
+          </Key>
+          <Property Name="IdTipoTejido" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Invertebrados" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdTip__38996AB5" FromRole="TipoTejido" ToRole="Invertebrados" />
+        </EntityType>
+        <EntityType Name="TipoUsuario">
+          <Key>
+            <PropertyRef Name="IdTipoUsuario" />
+          </Key>
+          <Property Name="IdTipoUsuario" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Usuario" Relationship="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario" FromRole="TipoUsuario" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IdUsuario" />
+          </Key>
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Usuario1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Contraseña" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdTipoUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TipoUsuario" Relationship="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario" FromRole="Usuario" ToRole="TipoUsuario" />
+        </EntityType>
+        <EntityType Name="Vertebrados">
+          <Key>
+            <PropertyRef Name="IdVertebrados" />
+          </Key>
+          <Property Name="IdVertebrados" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCientifico" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NumeroPatas" Type="Int32" />
+          <Property Name="IdHabitat" Type="Int32" />
+          <Property Name="IdTipoReproduccion" Type="Int32" />
+          <Property Name="IdTipoAlimentacion" Type="Int32" />
+          <Property Name="IdTipoRespiracion" Type="Int32" />
+          <Property Name="IdTipoExtremidad" Type="Int32" />
+          <Property Name="IdEstructuraPiel" Type="Int32" />
+          <Property Name="IdTipoSangre" Type="Int32" />
+          <NavigationProperty Name="EstructuraPiel" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdEst__2E1BDC42" FromRole="Vertebrados" ToRole="EstructuraPiel" />
+          <NavigationProperty Name="Habitat" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdHab__29572725" FromRole="Vertebrados" ToRole="Habitat" />
+          <NavigationProperty Name="TipoAlimentacion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2B3F6F97" FromRole="Vertebrados" ToRole="TipoAlimentacion" />
+          <NavigationProperty Name="TipoExtremidad" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2D27B809" FromRole="Vertebrados" ToRole="TipoExtremidad" />
+          <NavigationProperty Name="TipoReproduccion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2A4B4B5E" FromRole="Vertebrados" ToRole="TipoReproduccion" />
+          <NavigationProperty Name="TipoRespiracion" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2C3393D0" FromRole="Vertebrados" ToRole="TipoRespiracion" />
+          <NavigationProperty Name="TipoSangre" Relationship="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2F10007B" FromRole="Vertebrados" ToRole="TipoSangre" />
+        </EntityType>
+        <Association Name="FK__Vertebrad__IdEst__2E1BDC42">
+          <End Role="EstructuraPiel" Type="MagnaEnciclopediaAnimalTurboModel.EstructuraPiel" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstructuraPiel">
+              <PropertyRef Name="IdEstructuraPiel" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdEstructuraPiel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdHab__33D4B598">
+          <End Role="Habitat" Type="MagnaEnciclopediaAnimalTurboModel.Habitat" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Habitat">
+              <PropertyRef Name="IdHabitat" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdHabitat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Protozoar__IdHab__3D5E1FD2">
+          <End Role="Habitat" Type="MagnaEnciclopediaAnimalTurboModel.Habitat" Multiplicity="0..1" />
+          <End Role="Protozoarios" Type="MagnaEnciclopediaAnimalTurboModel.Protozoarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Habitat">
+              <PropertyRef Name="IdHabitat" />
+            </Principal>
+            <Dependent Role="Protozoarios">
+              <PropertyRef Name="IdHabitat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdHab__29572725">
+          <End Role="Habitat" Type="MagnaEnciclopediaAnimalTurboModel.Habitat" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Habitat">
+              <PropertyRef Name="IdHabitat" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdHabitat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__34C8D9D1">
+          <End Role="TipoReproduccion" Type="MagnaEnciclopediaAnimalTurboModel.TipoReproduccion" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoReproduccion">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__35BCFE0A">
+          <End Role="TipoAlimentacion" Type="MagnaEnciclopediaAnimalTurboModel.TipoAlimentacion" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAlimentacion">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__36B12243">
+          <End Role="TipoRespiracion" Type="MagnaEnciclopediaAnimalTurboModel.TipoRespiracion" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoRespiracion">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__37A5467C">
+          <End Role="TipoSimetria" Type="MagnaEnciclopediaAnimalTurboModel.TipoSimetria" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoSimetria">
+              <PropertyRef Name="IdTipoSimetria" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoSimetria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invertebr__IdTip__38996AB5">
+          <End Role="TipoTejido" Type="MagnaEnciclopediaAnimalTurboModel.TipoTejido" Multiplicity="0..1" />
+          <End Role="Invertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoTejido">
+              <PropertyRef Name="IdTipoTejido" />
+            </Principal>
+            <Dependent Role="Invertebrados">
+              <PropertyRef Name="IdTipoTejido" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Protozoar__IdTip__3E52440B">
+          <End Role="TipoReproduccion" Type="MagnaEnciclopediaAnimalTurboModel.TipoReproduccion" Multiplicity="0..1" />
+          <End Role="Protozoarios" Type="MagnaEnciclopediaAnimalTurboModel.Protozoarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoReproduccion">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Principal>
+            <Dependent Role="Protozoarios">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Protozoar__IdTip__3F466844">
+          <End Role="TipoAlimentacion" Type="MagnaEnciclopediaAnimalTurboModel.TipoAlimentacion" Multiplicity="0..1" />
+          <End Role="Protozoarios" Type="MagnaEnciclopediaAnimalTurboModel.Protozoarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAlimentacion">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Principal>
+            <Dependent Role="Protozoarios">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Protozoar__IdTip__403A8C7D">
+          <End Role="TipoRespiracion" Type="MagnaEnciclopediaAnimalTurboModel.TipoRespiracion" Multiplicity="0..1" />
+          <End Role="Protozoarios" Type="MagnaEnciclopediaAnimalTurboModel.Protozoarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoRespiracion">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Principal>
+            <Dependent Role="Protozoarios">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2B3F6F97">
+          <End Role="TipoAlimentacion" Type="MagnaEnciclopediaAnimalTurboModel.TipoAlimentacion" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAlimentacion">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoAlimentacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2D27B809">
+          <End Role="TipoExtremidad" Type="MagnaEnciclopediaAnimalTurboModel.TipoExtremidad" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoExtremidad">
+              <PropertyRef Name="IdTipoExtremidad" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoExtremidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2A4B4B5E">
+          <End Role="TipoReproduccion" Type="MagnaEnciclopediaAnimalTurboModel.TipoReproduccion" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoReproduccion">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoReproduccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2C3393D0">
+          <End Role="TipoRespiracion" Type="MagnaEnciclopediaAnimalTurboModel.TipoRespiracion" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoRespiracion">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoRespiracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vertebrad__IdTip__2F10007B">
+          <End Role="TipoSangre" Type="MagnaEnciclopediaAnimalTurboModel.TipoSangre" Multiplicity="0..1" />
+          <End Role="Vertebrados" Type="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoSangre">
+              <PropertyRef Name="IdTipoSangre" />
+            </Principal>
+            <Dependent Role="Vertebrados">
+              <PropertyRef Name="IdTipoSangre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_TipoUsuario">
+          <End Role="TipoUsuario" Type="MagnaEnciclopediaAnimalTurboModel.TipoUsuario" Multiplicity="1" />
+          <End Role="Usuario" Type="MagnaEnciclopediaAnimalTurboModel.Usuario" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TipoUsuario">
+              <PropertyRef Name="IdTipoUsuario" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MagnaEnciclopediaAnimalTurboModelStoreContainer" CdmEntityContainer="MagnaEnciclopediaAnimalTurboEntities">
+          <EntitySetMapping Name="EstructuraPiel">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.EstructuraPiel">
+              <MappingFragment StoreEntitySet="EstructuraPiel">
+                <ScalarProperty Name="IdEstructuraPiel" ColumnName="IdEstructuraPiel" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Habitat">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Habitat">
+              <MappingFragment StoreEntitySet="Habitat">
+                <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invertebrados">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Invertebrados">
+              <MappingFragment StoreEntitySet="Invertebrados">
+                <ScalarProperty Name="IdVertebrados" ColumnName="IdVertebrados" />
+                <ScalarProperty Name="NombreCientifico" ColumnName="NombreCientifico" />
+                <ScalarProperty Name="NumeroPatas" ColumnName="NumeroPatas" />
+                <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />
+                <ScalarProperty Name="IdTipoReproduccion" ColumnName="IdTipoReproduccion" />
+                <ScalarProperty Name="IdTipoAlimentacion" ColumnName="IdTipoAlimentacion" />
+                <ScalarProperty Name="IdTipoRespiracion" ColumnName="IdTipoRespiracion" />
+                <ScalarProperty Name="IdTipoSimetria" ColumnName="IdTipoSimetria" />
+                <ScalarProperty Name="IdTipoTejido" ColumnName="IdTipoTejido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Protozoarios">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Protozoarios">
+              <MappingFragment StoreEntitySet="Protozoarios">
+                <ScalarProperty Name="IdVertebrados" ColumnName="IdVertebrados" />
+                <ScalarProperty Name="NombreCientifico" ColumnName="NombreCientifico" />
+                <ScalarProperty Name="NumeroPatas" ColumnName="NumeroPatas" />
+                <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />
+                <ScalarProperty Name="IdTipoReproduccion" ColumnName="IdTipoReproduccion" />
+                <ScalarProperty Name="IdTipoAlimentacion" ColumnName="IdTipoAlimentacion" />
+                <ScalarProperty Name="IdTipoRespiracion" ColumnName="IdTipoRespiracion" />
+                <ScalarProperty Name="VivirAguaDulce" ColumnName="VivirAguaDulce" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoAlimentacion">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.TipoAlimentacion">
+              <MappingFragment StoreEntitySet="TipoAlimentacion">
+                <ScalarProperty Name="IdTipoAlimentacion" ColumnName="IdTipoAlimentacion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoExtremidad">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.TipoExtremidad">
+              <MappingFragment StoreEntitySet="TipoExtremidad">
+                <ScalarProperty Name="IdTipoExtremidad" ColumnName="IdTipoExtremidad" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoReproduccion">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.TipoReproduccion">
+              <MappingFragment StoreEntitySet="TipoReproduccion">
+                <ScalarProperty Name="IdTipoReproduccion" ColumnName="IdTipoReproduccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoRespiracion">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.TipoRespiracion">
+              <MappingFragment StoreEntitySet="TipoRespiracion">
+                <ScalarProperty Name="IdTipoRespiracion" ColumnName="IdTipoRespiracion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoSangre">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.TipoSangre">
+              <MappingFragment StoreEntitySet="TipoSangre">
+                <ScalarProperty Name="IdTipoSangre" ColumnName="IdTipoSangre" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoSimetria">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.TipoSimetria">
+              <MappingFragment StoreEntitySet="TipoSimetria">
+                <ScalarProperty Name="IdTipoSimetria" ColumnName="IdTipoSimetria" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoTejido">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.TipoTejido">
+              <MappingFragment StoreEntitySet="TipoTejido">
+                <ScalarProperty Name="IdTipoTejido" ColumnName="IdTipoTejido" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoUsuario">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.TipoUsuario">
+              <MappingFragment StoreEntitySet="TipoUsuario">
+                <ScalarProperty Name="IdTipoUsuario" ColumnName="IdTipoUsuario" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="IdTipoUsuario" ColumnName="IdTipoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vertebrados">
+            <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Vertebrados">
+              <MappingFragment StoreEntitySet="Vertebrados">
+                <ScalarProperty Name="IdVertebrados" ColumnName="IdVertebrados" />
+                <ScalarProperty Name="NombreCientifico" ColumnName="NombreCientifico" />
+                <ScalarProperty Name="NumeroPatas" ColumnName="NumeroPatas" />
+                <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />
+                <ScalarProperty Name="IdTipoReproduccion" ColumnName="IdTipoReproduccion" />
+                <ScalarProperty Name="IdTipoAlimentacion" ColumnName="IdTipoAlimentacion" />
+                <ScalarProperty Name="IdTipoRespiracion" ColumnName="IdTipoRespiracion" />
+                <ScalarProperty Name="IdTipoExtremidad" ColumnName="IdTipoExtremidad" />
+                <ScalarProperty Name="IdEstructuraPiel" ColumnName="IdEstructuraPiel" />
+                <ScalarProperty Name="IdTipoSangre" ColumnName="IdTipoSangre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="MagnaEnciclopediaAnimalTurboModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="MagnaEnciclopediaAnimalTurboModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="MagnaEnciclopediaAnimalTurboModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="MagnaEnciclopediaAnimalTurboModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="MagnaEnciclopediaAnimalTurboModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="MagnaEnciclopediaAnimalTurboModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="MagnaEnciclopediaAnimalTurboModel.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
