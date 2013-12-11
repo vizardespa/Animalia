@@ -167,6 +167,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvertebradosController.cs" />
     <Compile Include="Controllers\ProtozoariosController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\VertebradosController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -302,6 +303,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AnimaliaBD.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="logoSoloChico.ico" />
     <Content Include="Models\AnimaliaBD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AnimaliaBD.edmx</DependentUpon>
@@ -330,6 +332,7 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="TURBO!.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -386,6 +389,13 @@
     <Content Include="Views\Protozoarios\Create.cshtml" />
     <Content Include="Views\Protozoarios\Edit.cshtml" />
     <Content Include="Views\Protozoarios\Delete.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\Details.cshtml" />
+    <Content Include="Views\Usuario\Create.cshtml" />
+    <Content Include="Views\Usuario\Edit.cshtml" />
+    <Content Include="Views\Usuario\Delete.cshtml" />
+    <Content Include="Views\Usuario\_Layout.cshtml" />
+    <Content Include="Views\Usuario\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
