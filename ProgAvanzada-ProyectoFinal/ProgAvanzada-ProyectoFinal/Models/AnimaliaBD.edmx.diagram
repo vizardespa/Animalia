@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c5b320bb911746a090cd21edbf18a48b" Name="Diagrama1" ZoomLevel="80">
+      <Diagram DiagramId="74d70e6f6d98463fac33c947bcaddf46" Name="Diagrama1">
         <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.EstructuraPiel" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Habitat" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />

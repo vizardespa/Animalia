@@ -165,6 +165,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvertebradosController.cs" />
+    <Compile Include="Controllers\ProtozoariosController.cs" />
+    <Compile Include="Controllers\VertebradosController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -366,6 +369,21 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Vertebrados\Index.cshtml" />
+    <Content Include="Views\Vertebrados\Details.cshtml" />
+    <Content Include="Views\Vertebrados\Create.cshtml" />
+    <Content Include="Views\Vertebrados\Edit.cshtml" />
+    <Content Include="Views\Vertebrados\Delete.cshtml" />
+    <Content Include="Views\Invertebrados\Index.cshtml" />
+    <Content Include="Views\Invertebrados\Details.cshtml" />
+    <Content Include="Views\Invertebrados\Create.cshtml" />
+    <Content Include="Views\Invertebrados\Edit.cshtml" />
+    <Content Include="Views\Invertebrados\Delete.cshtml" />
+    <Content Include="Views\Protozoarios\Index.cshtml" />
+    <Content Include="Views\Protozoarios\Details.cshtml" />
+    <Content Include="Views\Protozoarios\Create.cshtml" />
+    <Content Include="Views\Protozoarios\Edit.cshtml" />
+    <Content Include="Views\Protozoarios\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

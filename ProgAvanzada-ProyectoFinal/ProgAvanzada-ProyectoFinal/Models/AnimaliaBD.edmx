@@ -112,9 +112,9 @@
         </EntityType>
         <EntityType Name="Invertebrados">
           <Key>
-            <PropertyRef Name="IdVertebrados" />
+            <PropertyRef Name="IdInvertebrados" />
           </Key>
-          <Property Name="IdVertebrados" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdInvertebrados" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="NombreCientifico" Type="varchar" MaxLength="100" />
           <Property Name="NumeroPatas" Type="int" />
           <Property Name="IdHabitat" Type="int" />
@@ -126,9 +126,9 @@
         </EntityType>
         <EntityType Name="Protozoarios">
           <Key>
-            <PropertyRef Name="IdVertebrados" />
+            <PropertyRef Name="IdProtozoarios" />
           </Key>
-          <Property Name="IdVertebrados" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdProtozoarios" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="NombreCientifico" Type="varchar" MaxLength="100" />
           <Property Name="NumeroPatas" Type="int" />
           <Property Name="IdHabitat" Type="int" />
@@ -629,9 +629,9 @@
         </EntityType>
         <EntityType Name="Invertebrados">
           <Key>
-            <PropertyRef Name="IdVertebrados" />
+            <PropertyRef Name="IdInvertebrados" />
           </Key>
-          <Property Name="IdVertebrados" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="IdInvertebrados" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="NombreCientifico" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="NumeroPatas" Type="Int32" />
           <Property Name="IdHabitat" Type="Int32" />
@@ -649,9 +649,9 @@
         </EntityType>
         <EntityType Name="Protozoarios">
           <Key>
-            <PropertyRef Name="IdVertebrados" />
+            <PropertyRef Name="IdProtozoarios" />
           </Key>
-          <Property Name="IdVertebrados" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="IdProtozoarios" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="NombreCientifico" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="NumeroPatas" Type="Int32" />
           <Property Name="IdHabitat" Type="Int32" />
@@ -1039,7 +1039,7 @@
           <EntitySetMapping Name="Invertebrados">
             <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Invertebrados">
               <MappingFragment StoreEntitySet="Invertebrados">
-                <ScalarProperty Name="IdVertebrados" ColumnName="IdVertebrados" />
+                <ScalarProperty Name="IdInvertebrados" ColumnName="IdInvertebrados" />
                 <ScalarProperty Name="NombreCientifico" ColumnName="NombreCientifico" />
                 <ScalarProperty Name="NumeroPatas" ColumnName="NumeroPatas" />
                 <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />
@@ -1054,7 +1054,7 @@
           <EntitySetMapping Name="Protozoarios">
             <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Protozoarios">
               <MappingFragment StoreEntitySet="Protozoarios">
-                <ScalarProperty Name="IdVertebrados" ColumnName="IdVertebrados" />
+                <ScalarProperty Name="IdProtozoarios" ColumnName="IdProtozoarios" />
                 <ScalarProperty Name="NombreCientifico" ColumnName="NombreCientifico" />
                 <ScalarProperty Name="NumeroPatas" ColumnName="NumeroPatas" />
                 <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />

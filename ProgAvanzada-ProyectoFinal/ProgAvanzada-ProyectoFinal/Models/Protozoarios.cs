@@ -14,7 +14,7 @@ namespace ProgAvanzada_ProyectoFinal.Models
     
     public partial class Protozoarios
     {
-        public int IdVertebrados { get; set; }
+        public int IdProtozoarios { get; set; }
         public string NombreCientifico { get; set; }
         public Nullable<int> NumeroPatas { get; set; }
         public Nullable<int> IdHabitat { get; set; }
