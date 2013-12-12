@@ -16,14 +16,21 @@ body {
 a {
     color: #fff;
     outline: none;
+    background-color:blue;
+    width: 250px;
+    height: 120px;
     /*padding-left: 3px;
     padding-right: 3px;*/
     text-decoration: underline;
 }
 
-    a:link, a:visited,
-    a:active, a:hover {
-        color: #333;
+    a:link, a:active, a:visited
+    {
+        color: #fff;
+    }
+
+    a:hover {
+        color: #000;
     }
 
     a:hover {

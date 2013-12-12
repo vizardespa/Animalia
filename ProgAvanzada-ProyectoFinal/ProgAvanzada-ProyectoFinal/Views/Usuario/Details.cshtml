@@ -1,0 +1,50 @@
+﻿@model ProgAvanzada_ProyectoFinal.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Usuario</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdUsuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdUsuario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Usuario1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Usuario1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Contraseña)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contraseña)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TipoUsuario.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TipoUsuario.Nombre)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

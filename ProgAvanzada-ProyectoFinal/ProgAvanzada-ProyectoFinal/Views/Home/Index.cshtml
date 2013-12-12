@@ -1,7 +1,30 @@
 ﻿@model ProgAvanzada_ProyectoFinal.Models.Usuario
 @{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Usuario/_Layout.cshtml";
 }
+
+<style type="text/css">
+        .colorAction {
+            color: black;
+        }
+            .colorAction:hover
+            {
+                background-color:blue;
+                color: white;
+            }
+
+            .colorAction:link
+            {
+                color: black;
+            }
+
+            .colorAction:visited
+            {
+                color: orangered;
+            }
+        </style>
+
 @section featured {
     <section class="featured">
     </section>
@@ -19,6 +42,8 @@
             <br />
             <br />
             <input type="submit" value="Ingresar"/>
+            <br />
+            @Html.ActionLink("Aun no cuentas con un usuario?", "Create", new { area = "", controller = "Usuario" }, new { @Class = "colorAction" }) 
             </center>
         }
         </p>
