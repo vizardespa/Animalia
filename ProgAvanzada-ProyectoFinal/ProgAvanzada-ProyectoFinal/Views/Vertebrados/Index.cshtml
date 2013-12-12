@@ -6,12 +6,13 @@
     ViewBag.Title = "Index";
 }
 
+
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
+@*
 @{
     DataTable table = ViewBag.table;
     var result = new List<dynamic>();
@@ -34,10 +35,9 @@
             rowStyle: "gridRow",
             alternatingRowStyle: "gridAltRow")
 </div>
-
-@*
-<table>
-    <tr>
+*@
+<table class="gridTable">
+    <tr class ="gridHead">
         <th>
             @Html.DisplayNameFor(model => model.IdVertebrados)
         </th>
@@ -51,31 +51,38 @@
             @Html.DisplayNameFor(model => model.NumeroPatas)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Habitat.Nombre)
+            @*@Html.DisplayNameFor(model => model.Habitat.Nombre)*@
+            Habitat
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoReproduccion.Nombre)
+           @* @Html.DisplayNameFor(model => model.TipoReproduccion.Nombre)*@
+            Tipo de Reproduccion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoAlimentacion.Nombre)
+            @*@Html.DisplayNameFor(model => model.TipoAlimentacion.Nombre)*@
+            Tipo de Alimentacion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoRespiracion.Nombre)
+            @*@Html.DisplayNameFor(model => model.TipoRespiracion.Nombre)*@
+            Tipo de Respiracion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoExtremidad.Nombre)
+            @*@Html.DisplayNameFor(model => model.TipoExtremidad.Nombre)*@
+            Tipo de Extremidades
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EstructuraPiel.Nombre)
+            @*@Html.DisplayNameFor(model => model.EstructuraPiel.Nombre)*@
+            Estructura de Piel
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoSangre.Nombre)
+            @*@Html.DisplayNameFor(model => model.TipoSangre.Nombre)*@
+            Tipo de Sangre
         </th>
-        <th></th>
+        <th>Controles</th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="gridRow">
         <td>
             @Html.DisplayFor(modelItem => item.IdVertebrados)
         </td>
@@ -110,11 +117,11 @@
             @Html.DisplayFor(modelItem => item.TipoSangre.Nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdVertebrados  }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdVertebrados  }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdVertebrados })
         </td>
     </tr>
 }
 
-</table>*@
+</table>

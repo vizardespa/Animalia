@@ -3,6 +3,7 @@
     ViewBag.Title = "Create";
 }
 
+@*
 <head>
    <meta charset="utf-8">
   <title>jQuery UI Dialog - Modal form</title>
@@ -10,7 +11,7 @@
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
- @* <style>
+  <style>
     body { font-size: 62.5%; }
     label, input { display:block; }
     input.text { margin-bottom:12px; width:95%; padding: .4em; }
@@ -21,7 +22,7 @@
     div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
     .ui-dialog .ui-state-error { padding: .3em; }
     .validateTips { border: 1px solid transparent; padding: 0.3em; }
-  </style>*@
+  </style>
   <script>
       $(function () {
           var name = $("#name"),
@@ -104,7 +105,7 @@
       });
   </script>
 </head>
-
+*@
 <h2>Create</h2>
 
 @using (Html.BeginForm()) {
@@ -149,7 +150,7 @@
             @Html.LabelFor(model => model.IdHabitat, "Habitat") 
         </div>
         <div class="editor-field">
-            @Html.DropDownList("IdHabitat", String.Empty) <button id="create-user">+</button>
+            @Html.DropDownList("IdHabitat", String.Empty) 
             @Html.ValidationMessageFor(model => model.IdHabitat)
         </div>
 
@@ -211,6 +212,7 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
+@*
 <div id="dialog-form" title="Create new user">
   <p class="validateTips">All form fields are required.</p>
  
@@ -225,7 +227,7 @@
   </fieldset>
   </form>
 </div>
-
+*@
 
 @*@section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

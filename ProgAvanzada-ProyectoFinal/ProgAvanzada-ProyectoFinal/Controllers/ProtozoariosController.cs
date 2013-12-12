@@ -20,10 +20,10 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
         public ActionResult Index()
         {
             var protozoarios = db.Protozoarios.Include(p => p.Habitat).Include(p => p.TipoReproduccion).Include(p => p.TipoAlimentacion).Include(p => p.TipoRespiracion);
-            list = protozoarios.ToList();
-            ViewBag.table = ConvertToTable(list);
-            //return View(protozoarios.ToList());
-            return View();
+           /* list = protozoarios.ToList();
+            ViewBag.table = ConvertToTable(list);*/
+            return View(protozoarios.ToList());
+            //return View();
         }
 
         //

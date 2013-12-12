@@ -20,10 +20,10 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
         public ActionResult Index()
         {
             var invertebrados = db.Invertebrados.Include(i => i.Habitat).Include(i => i.TipoReproduccion).Include(i => i.TipoAlimentacion).Include(i => i.TipoRespiracion).Include(i => i.TipoSimetria).Include(i => i.TipoTejido);
-            list = invertebrados.ToList();
-            ViewBag.table = ConvertToTable(list);
-            //return View(invertebrados.ToList());
-            return View();
+            /*list = invertebrados.ToList();
+            ViewBag.table = ConvertToTable(list);*/
+            return View(invertebrados.ToList());
+            //return View();
             
         }
 

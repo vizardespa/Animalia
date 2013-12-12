@@ -11,7 +11,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
+@*
 @{
     DataTable table = ViewBag.table;
     var result = new List<dynamic>();
@@ -33,11 +33,10 @@
             footerStyle: "gridFooter",
             rowStyle: "gridRow",
             alternatingRowStyle: "gridAltRow")
-</div>
+</div>*@
 
-@*
-<table>
-    <tr>
+<table class="gridTable">
+    <tr class ="gridHead">
         <th>
             @Html.DisplayNameFor(model => model.IdProtozoarios)
         </th>
@@ -51,16 +50,20 @@
             @Html.DisplayNameFor(model => model.NumeroPatas)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Habitat.Nombre)
+            @*@Html.DisplayNameFor(model => model.Habitat.Nombre)*@
+            Habitat
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoReproduccion.Nombre)
+           @* @Html.DisplayNameFor(model => model.TipoReproduccion.Nombre)*@
+            Tipo de Reproduccion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoAlimentacion.Nombre)
+            @*@Html.DisplayNameFor(model => model.TipoAlimentacion.Nombre)*@
+            Tipo de Alimentacion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoRespiracion.Nombre)
+            @*@Html.DisplayNameFor(model => model.TipoRespiracion.Nombre)*@
+            Tipo de Respiracion
         </th>
         <th>
             @Html.DisplayNameFor(model => model.VivirAguaDulce)
@@ -69,7 +72,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="gridRow">
         <td>
             @Html.DisplayFor(modelItem => item.IdProtozoarios)
         </td>
@@ -98,11 +101,11 @@
             @Html.DisplayFor(modelItem => item.VivirAguaDulce)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new {id=item.IdProtozoarios}) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdProtozoarios }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdProtozoarios })
         </td>
     </tr>
 }
 
-</table>*@
+</table>

@@ -21,10 +21,10 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
         public ActionResult Index()
         {
             var vertebrados = db.Vertebrados.Include(v => v.EstructuraPiel).Include(v => v.Habitat).Include(v => v.TipoAlimentacion).Include(v => v.TipoExtremidad).Include(v => v.TipoReproduccion).Include(v => v.TipoRespiracion).Include(v => v.TipoSangre);
-            list = vertebrados.ToList();
-            ViewBag.table = ConvertToTable(list);
-            //return View(vertebrados.ToList());
-            return View();
+            /*list = vertebrados.ToList();
+            ViewBag.table = ConvertToTable(list);*/
+            return View(vertebrados.ToList());
+            //return View();
         }
 
         //
