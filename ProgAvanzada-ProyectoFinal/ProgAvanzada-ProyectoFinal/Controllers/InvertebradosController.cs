@@ -15,11 +15,15 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
 
         //
         // GET: /Invertebrados/
-
+        private static List<Invertebrados> list;
         public ActionResult Index()
         {
             var invertebrados = db.Invertebrados.Include(i => i.Habitat).Include(i => i.TipoReproduccion).Include(i => i.TipoAlimentacion).Include(i => i.TipoRespiracion).Include(i => i.TipoSimetria).Include(i => i.TipoTejido);
-            return View(invertebrados.ToList());
+            list = invertebrados.ToList();
+            ViewBag.table = ConvertToTable(list);
+            //return View(invertebrados.ToList());
+            return View();
+            
         }
 
         //
@@ -141,5 +145,40 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
+
+        private System.Data.DataTable ConvertToTable(List<Invertebrados> list)
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+            dt.Columns.Add("IdInvertebrados");
+            dt.Columns.Add("Nombre Comun");
+            dt.Columns.Add("Nombre Cientifico");
+            dt.Columns.Add("Numero de Patas");
+            dt.Columns.Add("Habitat");
+            dt.Columns.Add("Tipo de Reproduccion");
+            dt.Columns.Add("Tipo de Alimentacion");
+            dt.Columns.Add("Tipo de Respiracion");
+            dt.Columns.Add("Tipo de Simetria");
+            dt.Columns.Add("Tipo de Tejido");
+
+            foreach (Invertebrados i in list)
+            {
+                dt.Rows.Add(new object[10]
+                {
+                    i.IdInvertebrados,
+                    i.NombreComun== null? "N/A":i.NombreComun,
+                    i.NombreCientifico== null? "N/A":i.NombreCientifico,
+                    i.NumeroPatas,
+                    i.Habitat== null? "N/A":i.Habitat.Nombre,
+                    i.TipoReproduccion== null? "N/A": i.TipoReproduccion.Nombre,
+                    i.TipoAlimentacion== null? "N/A":i.TipoAlimentacion.Nombre,
+                    i.TipoRespiracion== null? "N/A":i.TipoRespiracion.Nombre,
+                    i.TipoSimetria== null? "N/A":i.TipoSimetria.Nombre,
+                    i.TipoTejido== null? "N/A": i.TipoTejido.Nombre,
+                });
+
+            }
+            return dt;
+        }
+
     }
 }

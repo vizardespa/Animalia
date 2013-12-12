@@ -15,11 +15,14 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
 
         //
         // GET: /Protozoarios/
-
+        private static List<Protozoarios> list;
         public ActionResult Index()
         {
             var protozoarios = db.Protozoarios.Include(p => p.Habitat).Include(p => p.TipoReproduccion).Include(p => p.TipoAlimentacion).Include(p => p.TipoRespiracion);
-            return View(protozoarios.ToList());
+            list = protozoarios.ToList();
+            ViewBag.table = ConvertToTable(list);
+            //return View(protozoarios.ToList());
+            return View();
         }
 
         //
@@ -133,5 +136,39 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
+
+        private System.Data.DataTable ConvertToTable(List<Protozoarios> list)
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+            dt.Columns.Add("IdProtozoarios");
+            dt.Columns.Add("Nombre Comun");
+            dt.Columns.Add("Nombre Cientifico");
+            dt.Columns.Add("Numero de Patas");
+            dt.Columns.Add("Habitat");
+            dt.Columns.Add("Tipo de Reproduccion");
+            dt.Columns.Add("Tipo de Alimentacion");
+            dt.Columns.Add("Tipo de Respiracion");
+            dt.Columns.Add("¿Vive en agua dulce?");
+
+            foreach (Protozoarios p in list)
+            {
+                dt.Rows.Add(new object[9]
+                {
+                    p.IdProtozoarios,
+                    p.NombreComun== null? "N/A":p.NombreComun,
+                    p.NombreCientifico== null? "N/A":p.NombreCientifico,
+                    p.NumeroPatas,
+                    p.Habitat== null? "N/A":p.Habitat.Nombre,
+                    p.TipoReproduccion== null? "N/A": p.TipoReproduccion.Nombre,
+                    p.TipoAlimentacion== null? "N/A":p.TipoAlimentacion.Nombre,
+                    p.TipoRespiracion== null? "N/A":p.TipoRespiracion.Nombre,
+                    p.VivirAguaDulce== true? "Si": "No",
+                });
+
+            }
+            return dt;
+        }
+
+
     }
 }

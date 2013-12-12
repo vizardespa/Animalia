@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<ProgAvanzada_ProyectoFinal.Models.Protozoarios>
+@using System.Data;
+@using System.Dynamic;
 
 @{
     ViewBag.Title = "Index";
@@ -9,6 +11,31 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@{
+    DataTable table = ViewBag.table;
+    var result = new List<dynamic>();
+    foreach (DataRow row in table.Rows){
+        var obj = (IDictionary<string, object>)new ExpandoObject();
+        foreach (DataColumn col in table.Columns)
+        {
+            obj.Add(col.ColumnName, row[col.ColumnName]);
+        }
+        result.Add(obj);
+    }
+    var grid = new WebGrid(result);
+    grid.Pager(WebGridPagerModes.NextPrevious);
+}
+<div>
+    @grid.GetHtml(
+            tableStyle: "gridTable",
+            headerStyle: "gridHead",
+            footerStyle: "gridFooter",
+            rowStyle: "gridRow",
+            alternatingRowStyle: "gridAltRow")
+</div>
+
+@*
 <table>
     <tr>
         <th>
@@ -78,4 +105,4 @@
     </tr>
 }
 
-</table>
+</table>*@

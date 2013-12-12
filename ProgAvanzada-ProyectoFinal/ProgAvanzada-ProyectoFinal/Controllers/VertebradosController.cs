@@ -180,6 +180,7 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
                     v.EstructuraPiel== null? "N/A":v.EstructuraPiel.Nombre,
                     v.TipoSangre== null? "N/A": v.TipoSangre.Nombre,
                 });
+
             }
             return dt;
         }
