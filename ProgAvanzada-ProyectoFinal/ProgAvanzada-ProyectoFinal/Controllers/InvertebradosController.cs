@@ -159,7 +159,7 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
             dt.Columns.Add("Tipo de Respiracion");
             dt.Columns.Add("Tipo de Simetria");
             dt.Columns.Add("Tipo de Tejido");
-
+            
             foreach (Invertebrados i in list)
             {
                 dt.Rows.Add(new object[10]
