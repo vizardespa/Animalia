@@ -299,6 +299,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="light-blue-halftone.png" />
     <Content Include="logoSoloChico.ico" />
     <EntityDeploy Include="Models\AnimaliaBD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
