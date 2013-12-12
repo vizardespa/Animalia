@@ -50,6 +50,7 @@ mark {
 
 .float-left {
     float: left;
+    padding-left: 75px;
 }
 
 .float-right {
