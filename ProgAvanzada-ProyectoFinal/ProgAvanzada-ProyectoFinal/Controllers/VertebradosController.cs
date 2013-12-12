@@ -15,11 +15,14 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
 
         //
         // GET: /Vertebrados/
-
+        private static List<Vertebrados> list;
         public ActionResult Index()
         {
             var vertebrados = db.Vertebrados.Include(v => v.EstructuraPiel).Include(v => v.Habitat).Include(v => v.TipoAlimentacion).Include(v => v.TipoExtremidad).Include(v => v.TipoReproduccion).Include(v => v.TipoRespiracion).Include(v => v.TipoSangre);
-            return View(vertebrados.ToList());
+            list = vertebrados.ToList();
+            ViewBag.table = ConvertToTable(list);
+            //return View(vertebrados.ToList());
+            return View();
         }
 
         //
@@ -145,5 +148,39 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
+
+        private System.Data.DataTable ConvertToTable(List<Vertebrados> list)
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+            dt.Columns.Add("IdVertebrados");
+            dt.Columns.Add("Nombre Cientifico");
+            dt.Columns.Add("Numero de Patas");
+            dt.Columns.Add("Habitat");
+            dt.Columns.Add("Tipo de Reproduccion");
+            dt.Columns.Add("Tipo de Alimentacion");
+            dt.Columns.Add("Tipo de Respiracion");
+            dt.Columns.Add("Tipo de Extremidad");
+            dt.Columns.Add("Estructura de Piel");
+            dt.Columns.Add("Tipo de Sangre");
+
+            foreach (Vertebrados v in list)
+            {
+                dt.Rows.Add(new object[10]
+                {
+                    v.IdVertebrados,
+                    v.NombreCientifico,
+                    v.NumeroPatas,
+                    v.Habitat== null? "N/A":v.Habitat.Nombre,
+                    v.TipoReproduccion== null? "N/A": v.TipoReproduccion.Nombre,
+                    v.TipoAlimentacion== null? "N/A":v.TipoAlimentacion.Nombre,
+                    v.TipoRespiracion== null? "N/A":v.TipoRespiracion.Nombre,
+                    v.TipoExtremidad== null? "N/A":v.TipoExtremidad.Nombre,
+                    v.EstructuraPiel== null? "N/A":v.EstructuraPiel.Nombre,
+                    v.TipoSangre== null? "N/A": v.TipoSangre.Nombre,
+                });
+            }
+            return dt;
+        }
+
     }
 }
