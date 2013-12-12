@@ -1,8 +1,109 @@
 ﻿@model ProgAvanzada_ProyectoFinal.Models.Vertebrados
-
 @{
     ViewBag.Title = "Create";
 }
+
+<head>
+   <meta charset="utf-8">
+  <title>jQuery UI Dialog - Modal form</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+ @* <style>
+    body { font-size: 62.5%; }
+    label, input { display:block; }
+    input.text { margin-bottom:12px; width:95%; padding: .4em; }
+    fieldset { padding:0; border:0; margin-top:25px; }
+    h1 { font-size: 1.2em; margin: .6em 0; }
+    div#users-contain { width: 350px; margin: 20px 0; }
+    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+    .ui-dialog .ui-state-error { padding: .3em; }
+    .validateTips { border: 1px solid transparent; padding: 0.3em; }
+  </style>*@
+  <script>
+      $(function () {
+          var name = $("#name"),
+            email = $("#email"),
+            password = $("#password"),
+            allFields = $([]).add(name).add(email).add(password),
+            tips = $(".validateTips");
+
+          function updateTips(t) {
+              tips
+                .text(t)
+                .addClass("ui-state-highlight");
+              setTimeout(function () {
+                  tips.removeClass("ui-state-highlight", 1500);
+              }, 500);
+          }
+
+          function checkLength(o, n, min, max) {
+              if (o.val().length > max || o.val().length < min) {
+                  o.addClass("ui-state-error");
+                  updateTips("Length of " + n + " must be between " +
+                    min + " and " + max + ".");
+                  return false;
+              } else {
+                  return true;
+              }
+          }
+
+          function checkRegexp(o, regexp, n) {
+              if (!(regexp.test(o.val()))) {
+                  o.addClass("ui-state-error");
+                  updateTips(n);
+                  return false;
+              } else {
+                  return true;
+              }
+          }
+
+          $("#dialog-form").dialog({
+              autoOpen: false,
+              height: 300,
+              width: 350,
+              modal: true,
+              buttons: {
+                  "Create an account": function () {
+                      var bValid = true;
+                      allFields.removeClass("ui-state-error");
+
+                      bValid = bValid && checkLength(name, "username", 3, 16);
+                      bValid = bValid && checkLength(email, "email", 6, 80);
+                      bValid = bValid && checkLength(password, "password", 5, 16);
+
+                      bValid = bValid && checkRegexp(name, /^[a-z]([0-9a-z_])+$/i, "Username may consist of a-z, 0-9, underscores, begin with a letter.");
+                      // From jquery.validate.js (by joern), contributed by Scott Gonzalez: http://projects.scottsplayground.com/email_address_validation/
+                      bValid = bValid && checkRegexp(password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9");
+
+                      if (bValid) {
+                          $("#users tbody").append("<tr>" +
+                            "<td>" + name.val() + "</td>" +
+                            "<td>" + email.val() + "</td>" +
+                            "<td>" + password.val() + "</td>" +
+                          "</tr>");
+                          $(this).dialog("close");
+                      }
+                  },
+                  Cancel: function () {
+                      $(this).dialog("close");
+                  }
+              },
+              close: function () {
+                  allFields.val("").removeClass("ui-state-error");
+              }
+          });
+
+          $("#create-user")
+            .button()
+            .click(function () {
+                $("#dialog-form").dialog("open");
+            });
+      });
+  </script>
+</head>
 
 <h2>Create</h2>
 
@@ -12,13 +113,13 @@
     <fieldset>
         <legend>Vertebrados</legend>
 
-        <div class="editor-label">
+       @* <div class="editor-label">
             @Html.LabelFor(model => model.IdVertebrados)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.IdVertebrados)
             @Html.ValidationMessageFor(model => model.IdVertebrados)
-        </div>
+        </div>*@
 
         <div class="editor-label">
             @Html.LabelFor(model => model.NombreComun)
@@ -45,10 +146,10 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.IdHabitat, "Habitat")
+            @Html.LabelFor(model => model.IdHabitat, "Habitat") 
         </div>
         <div class="editor-field">
-            @Html.DropDownList("IdHabitat", String.Empty)
+            @Html.DropDownList("IdHabitat", String.Empty) <button id="create-user">+</button>
             @Html.ValidationMessageFor(model => model.IdHabitat)
         </div>
 
@@ -110,6 +211,23 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
-@section Scripts {
+<div id="dialog-form" title="Create new user">
+  <p class="validateTips">All form fields are required.</p>
+ 
+  <form>
+  <fieldset>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">
+  </fieldset>
+  </form>
+</div>
+
+
+@*@section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-}
+  
+}*@
