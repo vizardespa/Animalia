@@ -152,18 +152,28 @@ footer {
 ----------------------------------------------------------*/
 #login {
     display: block;
-    font-size: .85em;
+    font-size: 1em;
     margin: 0 0 10px;
     text-align: right;
+    font-style: oblique;
+    font-family: cursive;
+    font-weight: bold;
+    color: #000;
 }
 
     #login a {
-        background-color: #d3dce0;
+        background-color: transparent;
+        color:black;
         margin-left: 10px;
         margin-right: 3px;
         padding: 2px 3px;
-        text-decoration: none;
+        text-decoration: underline;
     }
+
+        #login a.hover
+        {
+            text-decoration: underline;
+        }
 
     #login a.username {
         background: none;
@@ -200,12 +210,12 @@ ul#menu {
 
         ul#menu li a {
             background: none;
-            color: #999;
+            color: #000;
             text-decoration: none;
         }
 
         ul#menu li a:hover {
-            color: #333;
+            color: orangered;
             text-decoration: none;
         }
 

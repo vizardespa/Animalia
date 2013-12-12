@@ -1,6 +1,7 @@
 ﻿@model ProgAvanzada_ProyectoFinal.Models.Usuario
+
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Usuario/_Layout.cshtml";
 }
 
@@ -31,11 +32,11 @@
 }
     <div>
         <p align="center">
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             @using (Html.BeginForm()) {
             <center>
             @Html.AntiForgeryToken()
-            @Html.Label("Usuario");
+            @Html.Label("Usuario")
             @Html.TextBoxFor(m=>m.Usuario1)
             @Html.LabelFor(m=>m.Contraseña)
             @Html.TextBoxFor(m=>m.Contraseña,new { type = "password"})

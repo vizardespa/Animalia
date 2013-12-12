@@ -4,31 +4,73 @@
 
 <hgroup class="title">
     <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
 </hgroup>
 
+<style type="text/css">
+        .colorLabel {
+            color: black;
+            background-color:transparent;
+            text-decoration:none;
+            font-weight:bold;
+        }
+            .colorLabel:hover
+            {
+                text-decoration:underline;
+                color: black;
+            }
+
+            .colorLabel:link
+            {
+                color: black;
+            }
+
+            .colorLabel:visited
+            {
+                color: orangered;
+            }
+
+    .colorParagraph
+    {
+            color: black;
+            background-color:azure;
+            font-family:Arial;
+            text-decoration:none;
+            line-height:200%;
+ 
+    }
+        </style>
+
 <article>
-    <p>
-        Use esta área para proporcionar información adicional.
+    <p class="colorParagraph">
+        Actualmente existen diferentes bases de datos que contienen información similar pero no son eficientes. 
+        Existen una gran cantidad de científicos que necesitan un sistema eficaz sin importar los recursos económicos. 
+        Nuestro programa podrá documentar, organizar y actualizar la información además de exportarla y así lograr un fácil manejo de la información. 
+        Con una interfaz sencilla, la cuál será entendible para cualquier tipo de usuario.
     </p>
 
-    <p>
-        Use esta área para proporcionar información adicional.
-    </p>
+</article>
+<p></p>
 
-    <p>
-        Use esta área para proporcionar información adicional.
+<article>
+    <hgroup class="title">
+    <h1>Visión</h1>
+    </hgroup>
+
+    <p class="colorParagraph">
+        Con nuestro programa los científicos podrán organizar y consultar especies animales así como actualizar, eliminar y documentar cada uno de estos y dependiendo del caso 
+        se podrá exportar a un documento de Excel o de Word, para una fácil extracción de la información sin quitar la funcionalidad de verlo desde el programa. 
+        Cabe mencionar que los usuarios que podrán realizar modificaciones deberán cumplir ciertos requisitos previamente definidos con el fin de contar siempre con la información mas confiable.
     </p>
 </article>
 
-<aside>
+@*<aside>
     <h3>Al lado del título</h3>
     <p>
         Use esta área para proporcionar información adicional.
     </p>
     <ul>
-        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-        <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-        <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+        <li>@Html.ActionLink("Inicio", "Index",  new { area = "", controller = "Usuario" }, new { Class = "colorLabel" })</li>
+        <li>@Html.ActionLink("Acerca de", "About", "Home", new { Class = "colorLabel" })</li>
+        <li>@Html.ActionLink("Contacto", "Contact", "Home", new { Class = "colorLabel" })</li>
     </ul>
-</aside>
+</aside>*@
