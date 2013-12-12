@@ -11,7 +11,6 @@ namespace ProgAvanzada_ProyectoFinal.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     
     public partial class Usuario
     {
@@ -22,23 +21,5 @@ namespace ProgAvanzada_ProyectoFinal.Models
         public int IdTipoUsuario { get; set; }
     
         public virtual TipoUsuario TipoUsuario { get; set; }
-
-        public static bool Login(string User, string pass)
-        {
-            bool b = false;
-            try
-            {
-                using (var entities = new MagnaEnciclopediaAnimalTurboEntities())
-                {
-                    b = entities.Usuario.Any(x => x.Usuario1 == User && x.Contraseña == pass);
-                }
-            }
-
-            catch (Exception e)
-            {
-                throw e;
-            }
-            return b;
-        }
     }
 }

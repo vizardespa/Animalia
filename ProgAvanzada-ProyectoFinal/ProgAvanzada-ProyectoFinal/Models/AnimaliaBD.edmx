@@ -89,7 +89,7 @@
             <End Role="TipoSangre" EntitySet="TipoSangre" />
             <End Role="Vertebrados" EntitySet="Vertebrados" />
           </AssociationSet>
-          <AssociationSet Name="FK_Usuario_TipoUsuario" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK_Usuario_TipoUsuario">
+          <AssociationSet Name="FK_Usuario_TipoUsuario1" Association="MagnaEnciclopediaAnimalTurboModel.Store.FK_Usuario_TipoUsuario1">
             <End Role="TipoUsuario" EntitySet="TipoUsuario" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
@@ -115,6 +115,7 @@
             <PropertyRef Name="IdInvertebrados" />
           </Key>
           <Property Name="IdInvertebrados" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreComun" Type="nchar" MaxLength="100" />
           <Property Name="NombreCientifico" Type="varchar" MaxLength="100" />
           <Property Name="NumeroPatas" Type="int" />
           <Property Name="IdHabitat" Type="int" />
@@ -129,6 +130,7 @@
             <PropertyRef Name="IdProtozoarios" />
           </Key>
           <Property Name="IdProtozoarios" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreComun" Type="varchar" MaxLength="100" />
           <Property Name="NombreCientifico" Type="varchar" MaxLength="100" />
           <Property Name="NumeroPatas" Type="int" />
           <Property Name="IdHabitat" Type="int" />
@@ -226,6 +228,7 @@
             <PropertyRef Name="IdVertebrados" />
           </Key>
           <Property Name="IdVertebrados" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NombreComun" Type="nchar" MaxLength="100" />
           <Property Name="NombreCientifico" Type="varchar" MaxLength="100" />
           <Property Name="NumeroPatas" Type="int" />
           <Property Name="IdHabitat" Type="int" />
@@ -440,15 +443,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Usuario_TipoUsuario">
+        <Association Name="FK_Usuario_TipoUsuario1">
           <End Role="TipoUsuario" Type="MagnaEnciclopediaAnimalTurboModel.Store.TipoUsuario" Multiplicity="1" />
-          <End Role="Usuario" Type="MagnaEnciclopediaAnimalTurboModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Usuario" Type="MagnaEnciclopediaAnimalTurboModel.Store.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TipoUsuario">
               <PropertyRef Name="IdTipoUsuario" />
             </Principal>
             <Dependent Role="Usuario">
-              <PropertyRef Name="IdUsuario" />
+              <PropertyRef Name="IdTipoUsuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -572,7 +575,7 @@
             <End Role="TipoSangre" EntitySet="TipoSangre" />
             <End Role="Vertebrados" EntitySet="Vertebrados" />
           </AssociationSet>
-          <AssociationSet Name="FK_Usuario_TipoUsuario" Association="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario">
+          <AssociationSet Name="FK_Usuario_TipoUsuario1" Association="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario1">
             <End Role="TipoUsuario" EntitySet="TipoUsuario" />
             <End Role="Usuario" EntitySet="Usuario" />
           </AssociationSet>
@@ -632,6 +635,7 @@
             <PropertyRef Name="IdInvertebrados" />
           </Key>
           <Property Name="IdInvertebrados" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreComun" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
           <Property Name="NombreCientifico" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="NumeroPatas" Type="Int32" />
           <Property Name="IdHabitat" Type="Int32" />
@@ -652,6 +656,7 @@
             <PropertyRef Name="IdProtozoarios" />
           </Key>
           <Property Name="IdProtozoarios" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreComun" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="NombreCientifico" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="NumeroPatas" Type="Int32" />
           <Property Name="IdHabitat" Type="Int32" />
@@ -750,7 +755,7 @@
           <Property Name="IdTipoUsuario" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Descripcion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="Usuario" Relationship="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario" FromRole="TipoUsuario" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario" Relationship="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario1" FromRole="TipoUsuario" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -761,13 +766,14 @@
           <Property Name="Usuario1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Contraseña" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="IdTipoUsuario" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="TipoUsuario" Relationship="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario" FromRole="Usuario" ToRole="TipoUsuario" />
+          <NavigationProperty Name="TipoUsuario" Relationship="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario1" FromRole="Usuario" ToRole="TipoUsuario" />
         </EntityType>
         <EntityType Name="Vertebrados">
           <Key>
             <PropertyRef Name="IdVertebrados" />
           </Key>
           <Property Name="IdVertebrados" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreComun" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
           <Property Name="NombreCientifico" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="NumeroPatas" Type="Int32" />
           <Property Name="IdHabitat" Type="Int32" />
@@ -989,15 +995,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Usuario_TipoUsuario">
+        <Association Name="FK_Usuario_TipoUsuario1">
           <End Role="TipoUsuario" Type="MagnaEnciclopediaAnimalTurboModel.TipoUsuario" Multiplicity="1" />
-          <End Role="Usuario" Type="MagnaEnciclopediaAnimalTurboModel.Usuario" Multiplicity="0..1" />
+          <End Role="Usuario" Type="MagnaEnciclopediaAnimalTurboModel.Usuario" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TipoUsuario">
               <PropertyRef Name="IdTipoUsuario" />
             </Principal>
             <Dependent Role="Usuario">
-              <PropertyRef Name="IdUsuario" />
+              <PropertyRef Name="IdTipoUsuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1040,6 +1046,7 @@
             <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Invertebrados">
               <MappingFragment StoreEntitySet="Invertebrados">
                 <ScalarProperty Name="IdInvertebrados" ColumnName="IdInvertebrados" />
+                <ScalarProperty Name="NombreComun" ColumnName="NombreComun" />
                 <ScalarProperty Name="NombreCientifico" ColumnName="NombreCientifico" />
                 <ScalarProperty Name="NumeroPatas" ColumnName="NumeroPatas" />
                 <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />
@@ -1055,6 +1062,7 @@
             <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Protozoarios">
               <MappingFragment StoreEntitySet="Protozoarios">
                 <ScalarProperty Name="IdProtozoarios" ColumnName="IdProtozoarios" />
+                <ScalarProperty Name="NombreComun" ColumnName="NombreComun" />
                 <ScalarProperty Name="NombreCientifico" ColumnName="NombreCientifico" />
                 <ScalarProperty Name="NumeroPatas" ColumnName="NumeroPatas" />
                 <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />
@@ -1163,6 +1171,7 @@
             <EntityTypeMapping TypeName="MagnaEnciclopediaAnimalTurboModel.Vertebrados">
               <MappingFragment StoreEntitySet="Vertebrados">
                 <ScalarProperty Name="IdVertebrados" ColumnName="IdVertebrados" />
+                <ScalarProperty Name="NombreComun" ColumnName="NombreComun" />
                 <ScalarProperty Name="NombreCientifico" ColumnName="NombreCientifico" />
                 <ScalarProperty Name="NumeroPatas" ColumnName="NumeroPatas" />
                 <ScalarProperty Name="IdHabitat" ColumnName="IdHabitat" />

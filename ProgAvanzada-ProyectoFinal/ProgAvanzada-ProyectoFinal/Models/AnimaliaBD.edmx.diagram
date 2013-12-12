@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="74d70e6f6d98463fac33c947bcaddf46" Name="Diagrama1">
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.EstructuraPiel" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Habitat" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Protozoarios" Width="1.5" PointX="6" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoAlimentacion" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoExtremidad" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoReproduccion" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoRespiracion" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoSangre" Width="1.5" PointX="0.75" PointY="21.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoSimetria" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoTejido" Width="1.5" PointX="0.75" PointY="24.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoUsuario" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Usuario" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+      <Diagram DiagramId="856f164f933d430a994bda7cc6498c13" Name="Diagrama1">
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.EstructuraPiel" Width="1.5" PointX="3.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Habitat" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Invertebrados" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Protozoarios" Width="1.5" PointX="6" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoAlimentacion" Width="1.5" PointX="3.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoExtremidad" Width="1.5" PointX="3.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoReproduccion" Width="1.5" PointX="3.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoRespiracion" Width="1.5" PointX="3.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoSangre" Width="1.5" PointX="3.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoSimetria" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoTejido" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.TipoUsuario" Width="1.5" PointX="8.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Usuario" Width="1.5" PointX="11" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagnaEnciclopediaAnimalTurboModel.Vertebrados" Width="1.5" PointX="6" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdEst__2E1BDC42" ManuallyRouted="false" />
         <AssociationConnector Association="MagnaEnciclopediaAnimalTurboModel.FK__Invertebr__IdHab__33D4B598" ManuallyRouted="false" />
         <AssociationConnector Association="MagnaEnciclopediaAnimalTurboModel.FK__Protozoar__IdHab__3D5E1FD2" ManuallyRouted="false" />
@@ -37,7 +37,7 @@
         <AssociationConnector Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2A4B4B5E" ManuallyRouted="false" />
         <AssociationConnector Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="MagnaEnciclopediaAnimalTurboModel.FK__Vertebrad__IdTip__2F10007B" ManuallyRouted="false" />
-        <AssociationConnector Association="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="MagnaEnciclopediaAnimalTurboModel.FK_Usuario_TipoUsuario1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

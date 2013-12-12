@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.IdProtozoarios)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.NombreComun)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.NombreCientifico)
         </th>
         <th>
@@ -44,6 +47,9 @@
             @Html.DisplayFor(modelItem => item.IdProtozoarios)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.NombreComun)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.NombreCientifico)
         </td>
         <td>
@@ -65,9 +71,9 @@
             @Html.DisplayFor(modelItem => item.VivirAguaDulce)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdProtozoarios  }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdProtozoarios  }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdProtozoarios  })
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }

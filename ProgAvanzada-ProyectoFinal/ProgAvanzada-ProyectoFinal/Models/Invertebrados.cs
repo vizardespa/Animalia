@@ -15,6 +15,7 @@ namespace ProgAvanzada_ProyectoFinal.Models
     public partial class Invertebrados
     {
         public int IdInvertebrados { get; set; }
+        public string NombreComun { get; set; }
         public string NombreCientifico { get; set; }
         public Nullable<int> NumeroPatas { get; set; }
         public Nullable<int> IdHabitat { get; set; }

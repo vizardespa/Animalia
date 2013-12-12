@@ -167,7 +167,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvertebradosController.cs" />
     <Compile Include="Controllers\ProtozoariosController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\VertebradosController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -299,11 +298,11 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="logoSoloChico.ico" />
     <EntityDeploy Include="Models\AnimaliaBD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AnimaliaBD.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="logoSoloChico.ico" />
     <Content Include="Models\AnimaliaBD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AnimaliaBD.edmx</DependentUpon>
@@ -370,9 +369,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Vertebrados\Index.cshtml" />
     <Content Include="Views\Vertebrados\Details.cshtml" />
@@ -389,13 +385,9 @@
     <Content Include="Views\Protozoarios\Create.cshtml" />
     <Content Include="Views\Protozoarios\Edit.cshtml" />
     <Content Include="Views\Protozoarios\Delete.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Usuario\Details.cshtml" />
-    <Content Include="Views\Usuario\Create.cshtml" />
-    <Content Include="Views\Usuario\Edit.cshtml" />
-    <Content Include="Views\Usuario\Delete.cshtml" />
-    <Content Include="Views\Usuario\_Layout.cshtml" />
-    <Content Include="Views\Usuario\Login.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

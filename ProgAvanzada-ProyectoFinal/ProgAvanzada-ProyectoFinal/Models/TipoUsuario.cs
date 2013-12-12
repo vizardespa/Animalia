@@ -14,10 +14,15 @@ namespace ProgAvanzada_ProyectoFinal.Models
     
     public partial class TipoUsuario
     {
+        public TipoUsuario()
+        {
+            this.Usuario = new HashSet<Usuario>();
+        }
+    
         public int IdTipoUsuario { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
     
-        public virtual Usuario Usuario { get; set; }
+        public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }

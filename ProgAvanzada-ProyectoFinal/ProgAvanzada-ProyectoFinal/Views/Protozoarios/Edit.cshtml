@@ -12,13 +12,21 @@
     <fieldset>
         <legend>Protozoarios</legend>
 
-       @* <div class="editor-label">
+        <div class="editor-label">
             @Html.LabelFor(model => model.IdProtozoarios)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.IdProtozoarios)
             @Html.ValidationMessageFor(model => model.IdProtozoarios)
-        </div>*@
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NombreComun)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NombreComun)
+            @Html.ValidationMessageFor(model => model.NombreComun)
+        </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.NombreCientifico)

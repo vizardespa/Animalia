@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.IdInvertebrados)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.NombreComun)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.NombreCientifico)
         </th>
         <th>
@@ -47,6 +50,9 @@
             @Html.DisplayFor(modelItem => item.IdInvertebrados)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.NombreComun)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.NombreCientifico)
         </td>
         <td>
@@ -71,9 +77,9 @@
             @Html.DisplayFor(modelItem => item.TipoTejido.Nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdInvertebrados }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdInvertebrados}) |
-            @Html.ActionLink("Delete", "Delete", new {  id=item.IdInvertebrados })
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }

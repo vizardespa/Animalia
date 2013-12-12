@@ -17,6 +17,13 @@
     </div>
 
     <div class="display-label">
+         @Html.DisplayNameFor(model => model.NombreComun)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NombreComun)
+    </div>
+
+    <div class="display-label">
          @Html.DisplayNameFor(model => model.NombreCientifico)
     </div>
     <div class="display-field">
@@ -73,6 +80,6 @@
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.IdInvertebrados }) |
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
