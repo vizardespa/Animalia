@@ -9,6 +9,7 @@ using ProgAvanzada_ProyectoFinal.Models;
 
 namespace ProgAvanzada_ProyectoFinal.Controllers
 {
+    [Authorize]
     public class ProtozoariosController : Controller
     {
         private MagnaEnciclopediaAnimalTurboEntities db = new MagnaEnciclopediaAnimalTurboEntities();
