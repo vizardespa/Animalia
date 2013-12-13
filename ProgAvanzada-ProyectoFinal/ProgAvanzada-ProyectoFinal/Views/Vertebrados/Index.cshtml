@@ -11,7 +11,10 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
-    @Html.DropDownListFor(x => x, new[] {
+</p>
+<form method="post">
+<label>Buscar por: </label>
+    @*@Html.DropDownListFor(x => x, new[] {
      new SelectListItem{Value="1", Text = "IdVertebrados"},
      new SelectListItem{Value="2", Text = "Nombre Comun"},
      new SelectListItem{Value="3", Text = "Nombre Cientifico"},
@@ -23,11 +26,13 @@
      new SelectListItem{Value="9", Text = "Tipo de Extremidades"},
      new SelectListItem{Value="10", Text = "Tipo de Reproduccion"},
      new SelectListItem{Value="11", Text = "Estructura de Piel"},
-     new SelectListItem{Value="11", Text = "Tipo de Sangre"},
-        }, new { id = "filter" })
-    @Html.DisplayName("Buscar");
-    @Html.Editor("");
-</p>
+     new SelectListItem{Value="12", Text = "Tipo de Sangre"},
+        }, new { id = "filter" })*@
+    @Html.Label("Palabra a Buscar")
+    @Html.TextBox("txtAmount")
+        <input type="Submit" value="Consultar tabla" onclick="location.href='@Url.Action("Consultar", "Vertebrados")'", style ="background-color:azure; color: black" />
+</form>
+
 @*
 @{
    

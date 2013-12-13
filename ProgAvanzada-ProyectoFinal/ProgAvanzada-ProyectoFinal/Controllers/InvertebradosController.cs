@@ -16,7 +16,7 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
 
         //
         // GET: /Invertebrados/
-        private static List<Invertebrados> list;
+        //private static List<Invertebrados> list;
         public ActionResult Index()
         {
             var invertebrados = db.Invertebrados.Include(i => i.Habitat).Include(i => i.TipoReproduccion).Include(i => i.TipoAlimentacion).Include(i => i.TipoRespiracion).Include(i => i.TipoSimetria).Include(i => i.TipoTejido);

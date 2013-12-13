@@ -144,15 +144,79 @@ namespace ProgAvanzada_ProyectoFinal.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        /*[HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
+        [HttpPost]
+        public ActionResult Consultar(int id, string n)
         {
-            Vertebrados vertebrados = db.Vertebrados.Find(id);
-            db.Vertebrados.Remove(vertebrados);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            var vertebrados = db.Vertebrados.Include(v => v.EstructuraPiel).Include(v => v.Habitat).Include(v => v.TipoAlimentacion).Include(v => v.TipoExtremidad).Include(v => v.TipoReproduccion).Include(v => v.TipoRespiracion).Include(v => v.TipoSangre);
+            list = vertebrados.ToList();
+            var res = from r in list
+                      select r;
+            switch (id)
+            {
+                case 1:
+                    res = from r in list
+                          where r.IdVertebrados == int.Parse(n)
+                          select r;
+                    break;
+                case 2:
+                    res = from r in list
+                          where r.NombreComun == n
+                          select r;
+                    break;
+                case 3:
+                    res = from r in list
+                          where r.NombreCientifico == n
+                          select r;
+                    break;
+                case 4:
+                    res = from r in list
+                          where r.NumeroPatas == int.Parse(n)
+                          select r;
+                    break;
+                case 5:
+                    res = from r in list
+                          where r.Habitat.Nombre == n
+                          select r;
+                    break;
+                case 6:
+                    res = from r in list
+                          where r.TipoReproduccion.Nombre == n
+                          select r;
+                    break;
+                case 7:
+                    res = from r in list
+                          where r.TipoAlimentacion.Nombre == n
+                          select r;
+                    break;
+                case 8:
+                    res = from r in list
+                          where r.TipoRespiracion.Nombre == n
+                          select r;
+                    break;
+                case 9:
+                    res = from r in list
+                          where r.TipoRespiracion.Nombre == n
+                          select r;
+                    break;
+                case 10:
+                    res = from r in list
+                          where r.TipoRespiracion.Nombre == n
+                          select r;
+                    break;
+                case 11:
+                    res = from r in list
+                          where r.EstructuraPiel.Nombre == n
+                          select r;
+                    break;
+                case 12:
+                    res = from r in list
+                          where r.TipoSangre.Nombre == n
+                          select r;
+                    break;
+            }
+            return View(res);
         }
-        */
+
 
         protected override void Dispose(bool disposing)
         {
