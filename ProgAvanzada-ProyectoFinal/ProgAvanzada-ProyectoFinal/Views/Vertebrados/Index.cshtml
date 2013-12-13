@@ -11,10 +11,26 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    @Html.DropDownListFor(x => x, new[] {
+     new SelectListItem{Value="1", Text = "IdVertebrados"},
+     new SelectListItem{Value="2", Text = "Nombre Comun"},
+     new SelectListItem{Value="3", Text = "Nombre Cientifico"},
+     new SelectListItem{Value="4", Text = "Numero Patas"},
+     new SelectListItem{Value="5", Text = "Habitat"},
+     new SelectListItem{Value="6", Text = "Tipo de Reproduccion"},
+     new SelectListItem{Value="7", Text = "Tipo de Alimentacion"},
+     new SelectListItem{Value="8", Text = "Tipo de Respiracion"},
+     new SelectListItem{Value="9", Text = "Tipo de Extremidades"},
+     new SelectListItem{Value="10", Text = "Tipo de Reproduccion"},
+     new SelectListItem{Value="11", Text = "Estructura de Piel"},
+     new SelectListItem{Value="11", Text = "Tipo de Sangre"},
+        }, new { id = "filter" })
+    @Html.DisplayName("Buscar");
+    @Html.Editor("");
 </p>
 @*
 @{
-    DataTable table = ViewBag.table;
+   
     var result = new List<dynamic>();
     foreach (DataRow row in table.Rows){
         var obj = (IDictionary<string, object>)new ExpandoObject();
